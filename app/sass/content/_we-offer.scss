@@ -1,0 +1,46 @@
+.we-offer {
+
+  background-color: #f8f8f8;
+}
+
+.we-offer__wrap {
+  width: 100%;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flex;
+  display: inline-flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  &_item {
+    flex-basis: 355px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 30px;
+    &-pic {
+      width: 100%;
+      height: 182px;
+      border-top-left-radius: 5px;
+      border-top-right-radius: 5px;
+      img {
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+        width: 100%;
+        height: 100%;
+      }
+    }
+    &-text {
+      height: 130px;
+      width: 100%;
+      display: -webkit-inline-flex;
+      display: -ms-inline-flex;
+      display: inline-flex;
+      flex-flow: row wrap;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: #333;
+      font-family: $l;
+      font-size: 16px;
+    }
+  }
+}

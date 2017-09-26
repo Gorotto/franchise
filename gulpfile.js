@@ -34,39 +34,9 @@ var postcss = require('gulp-postcss'),//Блиотека-парсер стиле
     fixes = require('postcss-fixes');
 
 let pages = [
-  'app/pug/pages/purchasing-information/purchasing-information.pug',
-  'app/pug/pages/product-requests/product-requests.pug',
-  'app/pug/pages/profile-company/profile-company.pug',
-  'app/pug/pages/company/company-company.pug',
-  'app/pug/pages/company/company-person.pug',
-  'app/pug/pages/offers/offers.pug',
-  'app/pug/pages/auction/auction.pug',
-  'app/pug/pages/product/product.pug',
-  'app/pug/pages/ad-photo/ad-photo.pug',
-  'app/pug/pages/packaging/packaging-piece.pug',
-  'app/pug/pages/packaging/packaging-weight.pug',
-  'app/pug/pages/sales-volume/sales-volume.pug',
-  'app/pug/pages/place-transaction/place-transaction-delivery.pug',
-  'app/pug/pages/place-transaction/place-transaction-pickup.pug',
-  'app/pug/pages/payment-terms/payment-terms-partial-prepayment.pug',
-  'app/pug/pages/payment-terms/payment-terms-delay.pug',
-  'app/pug/pages/payment-terms/payment-terms-full-prepayment.pug',
-  'app/pug/pages/food-costs/food-costs.pug',
-  'app/pug/pages/subscription/subscription.pug',
-  'app/pug/pages/offer-parameters/offer-parameters.pug',
-  'app/pug/pages/guarantee-transactions/guarantee-transactions.pug',
-  'app/pug/pages/quality-parameters/quality-parameters-with-parameter.pug',
-  'app/pug/pages/quality-parameters/quality-parameters-without-parameter.pug',
-  'app/pug/pages/shelf-life/shelf-life.pug',
-  'app/pug/pages/comments/comments.pug',
-  'app/pug/pages/documentation/documentation.pug',
-  'app/pug/pages/prepayment/prepayment.pug',
-  'app/pug/pages/legal-requirements/legal-requirements.pug',
-  'app/pug/pages/product-sample/product-sample.pug',
-  'app/pug/pages/certificates/certificates.pug',
-  'app/pug/pages/delivery-parameters/delivery-parameters.pug',
-  'app/pug/pages/transport-packaging/transport-packaging.pug',
-  'app/pug/pages/return/return.pug'
+  // 'app/pug/pages/purchasing-information/purchasing-information.pug'
+  'app/pug/index.pug'
+
 
 ];
 gulp.task('css-libs', function () { // Создаем таск css-libs
@@ -185,7 +155,7 @@ gulp.task('extend-blocks', function () {
 });
 
 gulp.task('watch', ['browser-sync', 'pug', 'compress',/* 'extend-pages',*/ 'css-libs', 'img', 'sass'/*, 'sprite'*/], function () {
-    gulp.watch(['./app/pug/pages/*.pug', './app/pug/pages/**/*.pug'], ['pug']);
+    gulp.watch(['./app/pug/pages/*.pug', './app/pug/*.pug', './app/pug/pages/**/*.pug'], ['pug']);
     gulp.watch('app/libs/**/*', ['css-libs']); // Наблюдение за папкой libs
     gulp.watch('app/img/**/*', ['img']);// Наблюдение за папкой img
     gulp.watch('app/sass/**/*.scss', ['sass']); // Наблюдение за sass файлами в папке sass

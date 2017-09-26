@@ -1,0 +1,102 @@
+.tariffs {
+  background-color: #fff;
+}
+
+.tariffs__wrap {
+  width: 100%;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flex;
+  display: inline-flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+}
+
+.tariffs__wrap_item {
+  flex-basis: 350px;
+  background-color: #fff;
+  border: 1px solid #f4f4f4;
+  border-radius: 5px;
+  margin: 0 15px;
+  position: relative;
+  &-title {
+    height: 134px;
+    width: 100%;
+    text-align: center;
+    display: -webkit-inline-flex;
+    display: -ms-inline-flex;
+    display: inline-flex;
+    flex-flow: row wrap;
+    align-items: center;
+    padding: 25px 0;
+    box-sizing: border-box;
+    .name {
+      color: #333;
+      font-family: $sb;
+      font-size: 28px;
+      width: 100%;
+      float: left;
+    }
+    .price {
+      color: #333;
+      font-family: $l;
+      font-size: 20px;
+      width: 100%;
+      float: left;
+    }
+  }
+  &-row {
+    width: 100%;
+    height: 85px;
+    border-bottom: 1px solid #f4f4f4;
+    display: -webkit-inline-flex;
+    display: -ms-inline-flex;
+    display: inline-flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    &:last-of-type {
+      border-bottom: none;
+    }
+    span {
+      width: 100%;
+      float: left;
+      font-size: 14px;
+      color: #464646;
+      font-family: $b;
+    }
+    p {
+
+      float: left;
+      width: 100%;
+      font-size: 14px;
+      color: #333;
+      font-family: $l;
+      margin: 0;
+    }
+  }
+}
+
+.tarif-start {
+  background-color: #e4ffe7;
+}
+
+.tarif-advanced {
+  background-color: #eaf5fc;
+}
+.tarif-master{
+  background-color: #fff3d6;
+}
+
+
+.tarif-button {
+  @include sprite($button);
+  position: absolute;
+  display: block;
+  left: 0;
+  bottom: -80px;
+  left: calc(50% - (239px/2));
+  &:hover {
+    @include sprite($button-hover);
+  }
+}

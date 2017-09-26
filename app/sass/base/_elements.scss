@@ -1,0 +1,27 @@
+h2 {
+  position: relative;
+  color: #333;
+  font-family: $sb;
+  font-size: 40px;
+  margin: 0;
+  line-height: 54px;
+  float: left;
+  width: 50%;
+  &:after {
+    content: "";
+    width: 84px;
+    height: 3px;
+    background-color: #ffb400;
+    position: absolute;
+    left: 0;
+    bottom: -15px;
+  }
+}
+
+section {
+  padding: 100px 0;
+  box-sizing: border-box;
+  float: left;
+  width: 100%;
+  position: relative;
+}

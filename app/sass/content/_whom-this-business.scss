@@ -1,0 +1,76 @@
+.whom-this-business {
+  background-color: #f9f9f9;
+}
+
+.whom-this-business__wrap {
+  width: 100%;
+  float: left;
+  position: relative;
+}
+
+.whom-this-business__wrap_item {
+  width: 25%;
+  float: left;
+  position: relative;
+  text-align: center;
+  &:after {
+    content: "";
+    position: absolute;
+    right: -86px;
+    margin-top: -68px;
+    @include sprite($circle-and-line);
+  }
+  &:last-of-type {
+    &:after {
+      display: none;
+    }
+  }
+  &-pic {
+    float: none;
+    margin: 0 auto;
+    width: 132px;
+    height: 132px;
+    border: 1px solid #00a8d7;
+    border-radius: 50%;
+    position: relative;
+    &:before {
+      content: "";
+      position: absolute;
+      width: 92px;
+      height: 92px;
+      border-radius: 50%;
+      background-color: #00a8d7;
+      margin-top: calc(50% - (92px/2));
+      left: calc(50% - (92px/2));
+    }
+    &:after {
+      content: "";
+      position: absolute;
+      margin-top: calc(50% - (52px/2));
+      left: calc(50% - (24px/2));
+    }
+  }
+  &-text {
+    color: #333;
+    font-family: $l;
+    font-size: 18px;
+    text-align: center;
+    line-height: 26px;
+    width: 55%;
+    margin: 15px auto 0;
+    display: inline-block;
+  }
+}
+
+.people-first:after {
+  @include sprite($people-1);
+}
+.people-second:after {
+  @include sprite($people-2);
+}
+.people-third:after {
+  @include sprite($people-3);
+}
+.people-fourth:after {
+  @include sprite($people-4);
+}

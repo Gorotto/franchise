@@ -1,0 +1,81 @@
+.box-business {
+  background-color: #f8f8f8;
+}
+
+.box-business__wrap {
+  width: 100%;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flex;
+  display: inline-flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+
+.box-business__wrap_item {
+  flex-basis: 33%;
+  text-align: center;
+  margin-top: 50px;
+}
+
+.box-business__wrap_item-pic {
+  width: 132px;
+  height: 132px;
+  border-radius: 50%;
+  border: 1px solid #00a8d7;
+  margin: 0 auto 10px;
+  position: relative;
+  &:after {
+    content: "";
+    position: absolute;
+    left: calc(50% - (92px/2));
+    margin-top: calc(50% - (92px/2));
+  }
+}
+
+.box-business__wrap_item-text {
+  width: 100%;
+  color: #333;
+  text-align: center;
+  span {
+    font-size: 18px;
+    font-family: $sb;
+    text-align: center;
+    position: relative;
+    &:after {
+      content: "";
+      width: 20px;
+      height: 3px;
+      background-color: #00a8d7;
+      left: calc(50% - (20px/2));
+      position: absolute;
+      bottom: -10px;
+    }
+  }
+  p {
+    margin: 15px auto 0;
+    font-size: 16px;
+    font-family: $l;
+    line-height: 24px;
+    width: 100%;
+
+  }
+}
+
+.start:after {
+  @include sprite($box-start);
+}
+.instruments:after {
+  @include sprite($box-instruments);
+}
+.control:after {
+  @include sprite($box-control);
+}
+.brain:after {
+  @include sprite($box-brain);
+}
+.marketing:after {
+  @include sprite($box-marketing);
+}
+.innovations:after {
+  @include sprite($box-innovations);
+}
